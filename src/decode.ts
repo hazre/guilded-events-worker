@@ -51,7 +51,7 @@ function convert_from_utf32(utf32_value: number): string {
  * @param {number} hours_offset - The optional hours offset.
  * @returns {string}
  */
-export function decode(date_string: string, hours_offset: number): string {
+export function decode(date_string: string, hours_offset: number = 3): string {
   // Convert date string to Unix timestamps
   const first_timestamp = decode_date_string(date_string);
   const second_timestamp = decode_date_string(date_string, hours_offset);
